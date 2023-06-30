@@ -6,6 +6,7 @@ import getDataFromApi from '../services/api.js';
 import CharacterList from './CharacterList';
 import '../styles/CharacterList.scss';
 
+
 function App() {
   const [characterList, setCharacterList] = useState([]);
 
