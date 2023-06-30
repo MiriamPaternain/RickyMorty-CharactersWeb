@@ -1,29 +1,32 @@
-.main__characters{
-
+.main__characters {
 }
 
-.list{
-        display: flex;
-        justify-content: center;
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 20px;
-            list-style: none;
-    &--eachCharacter{
-        border: 1px solid #3bb54a;
-        border-radius: 4px;
-        box-shadow: 0px 0px 8px #3bb54a;
-        
-            
-    }
-    &--img{
-        width: 200px;
-
-    }
-    &--name{
-
-    }
-    &--species{
-
-    }
+.list {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  &--eachCharacter {
+    border: 1px solid #3bb54a;
+    border-radius: 4px;
+    box-shadow: 0px 0px 8px #3bb54a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#13afc9;
+    
+  }
+  &--img {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    width: 200px;
+  }
+  &--name {
+    color: white;
+  }
+  &--species {
+    color: white;
+  }
 }
