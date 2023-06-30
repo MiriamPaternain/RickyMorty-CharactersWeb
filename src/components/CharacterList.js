@@ -9,7 +9,7 @@ const CharacterList = ({ characterList }) => {
   ));
 
   return (
-  <ul>
+  <ul className='list'>
     {htmlLi}
     </ul>
     );

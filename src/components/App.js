@@ -4,7 +4,7 @@ import '../styles/App.scss';
 import '../styles/Header.scss';
 import getDataFromApi from '../services/api.js';
 import CharacterList from './CharacterList';
-import CharacterItem from './CharacterItem';
+import '../styles/CharacterList.scss';
 
 function App() {
   const [characterList, setCharacterList] = useState([]);
@@ -28,7 +28,7 @@ function App() {
         <section className='main__filters'>
           <form className='main__filter--byName'></form>
         </section>
-        <section className='main__characters'>
+        <section>
           <form className='main__characters--listCaracter'>
             <CharacterList characterList={characterList} />
           </form>
