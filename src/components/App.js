@@ -38,16 +38,16 @@ function App() {
     }
   };
 
-  const {pathname} = useLocation();
+  const { pathname } = useLocation();
   const routeData = matchPath('/character/:characterId', pathname);
   const characterId = routeData?.params.characterId;
-console.log(characterId);
+  console.log(characterId);
   //const characterId = routeData !== null ? routeData.params.contactId: '';
 
   const characterData = characterList.find(
     (eachCharacter) => eachCharacter.id === parseInt(characterId)
   );
-console.log(characterId);
+  console.log(characterId);
   return (
     <div>
       <header className='header'>
