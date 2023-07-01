@@ -7,18 +7,35 @@ import CharacterList from './CharacterList';
 import '../styles/CharacterList.scss';
 import ls from '../services/localStorage.js';
 import '../styles/Filter.scss';
+import Filters from './Filters';
 
 function App() {
+  //variables de estado
   const [characterList, setCharacterList] = useState(ls.get('characters', []));
+  const [filterByName, setFilterByName] = useState('');
 
+  //useEffect
   useEffect(() => {
-    if (localStorage.getItem('characters') === null){
+    if (localStorage.getItem('characters') === null) {
       getDataFromApi().then((cleanData) => {
         setCharacterList(cleanData);
         ls.set('characters', cleanData);
       });
     }
   }, []);
+
+  //events
+
+  //functions
+  const filteredList = characterList.filter((eachCharacter) =>
+    eachCharacter.name.toLowerCase().includes(filterByName.toLowerCase())
+  );
+
+  const handleFilter = (filterBy, targetValue) => {
+    if (filterBy === 'name') {
+      setFilterByName(targetValue);
+    }
+  };
 
   return (
     <div>
@@ -30,20 +47,13 @@ function App() {
         />
       </header>
       <main className='main'>
-       
-          <form className='main__filter'>
-            <input type="text" name="name_filter" placeholder='Busca aquí tu personaje' className='main__filter--byName'/>
-          </form>
-     
-        <section>
-          <form className='main__characters--listCaracter'>
-            <CharacterList characterList={characterList} />
-          </form>
-        </section>
-      </main>
-      <footer>
+        <Filters filterByName={filterByName} handleFilter={handleFilter} />
 
-      </footer>
+        <form className='main__characters--listCaracter'>
+          <CharacterList characterList={filteredList} />
+        </form>
+      </main>
+      <footer></footer>
     </div>
   );
 }
