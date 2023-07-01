@@ -6,6 +6,7 @@ import getDataFromApi from '../services/api.js';
 import CharacterList from './CharacterList';
 import '../styles/CharacterList.scss';
 import ls from '../services/localStorage.js';
+import '../styles/Filter.scss';
 
 function App() {
   const [characterList, setCharacterList] = useState(ls.get('characters', []));
@@ -29,15 +30,20 @@ function App() {
         />
       </header>
       <main className='main'>
-        <section className='main__filters'>
-          <form className='main__filter--byName'></form>
-        </section>
+       
+          <form className='main__filter'>
+            <input type="text" name="name_filter" placeholder='Busca aquí tu personaje' className='main__filter--byName'/>
+          </form>
+     
         <section>
           <form className='main__characters--listCaracter'>
             <CharacterList characterList={characterList} />
           </form>
         </section>
       </main>
+      <footer>
+
+      </footer>
     </div>
   );
 }
