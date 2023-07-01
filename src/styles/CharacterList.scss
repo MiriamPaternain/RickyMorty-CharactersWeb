@@ -12,7 +12,9 @@
   flex-wrap: wrap;
   gap: 20px;
   list-style: none;
-
+&--a{
+  text-decoration: none;
+}
   &--eachCharacter {
     border: 1px solid #3bb54a;
     border-radius: 4px;
@@ -40,6 +42,9 @@
   &--species {
     color: white;
   }
+&--link{
+  text-decoration: none;
+}
 }
 
 .list--eachCharacter::after {

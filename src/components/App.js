@@ -8,6 +8,9 @@ import '../styles/CharacterList.scss';
 import ls from '../services/localStorage.js';
 import '../styles/Filter.scss';
 import Filters from './Filters';
+import { Routes, Route } from 'react-router-dom';
+import CharacterCard from './CharacterCard.js';
+import { matchPath, useLocation } from 'react-router';
 
 function App() {
   //variables de estado
@@ -24,8 +27,6 @@ function App() {
     }
   }, []);
 
-  //events
-
   //functions
   const filteredList = characterList.filter((eachCharacter) =>
     eachCharacter.name.toLowerCase().includes(filterByName.toLowerCase())
@@ -37,6 +38,16 @@ function App() {
     }
   };
 
+  const {pathname} = useLocation();
+  const routeData = matchPath('/character/:characterId', pathname);
+  const characterId = routeData?.params.characterId;
+console.log(characterId);
+  //const characterId = routeData !== null ? routeData.params.contactId: '';
+
+  const characterData = characterList.find(
+    (eachCharacter) => eachCharacter.id === parseInt(characterId)
+  );
+console.log(characterId);
   return (
     <div>
       <header className='header'>
@@ -47,11 +58,26 @@ function App() {
         />
       </header>
       <main className='main'>
-        <Filters filterByName={filterByName} handleFilter={handleFilter} />
-
-        <form className='main__characters--listCaracter'>
-          <CharacterList characterList={filteredList} />
-        </form>
+        <Routes>
+          <Route
+            path='/'
+            element={
+              <>
+                <Filters
+                  filterByName={filterByName}
+                  handleFilter={handleFilter}
+                />
+                <form className='main__characters--listCaracter'>
+                  <CharacterList characterList={filteredList} />
+                </form>
+              </>
+            }
+          />
+          <Route
+            path='/character/:characterId'
+            element={<CharacterCard characterData={characterData} />}
+          />
+        </Routes>
       </main>
       <footer></footer>
     </div>
