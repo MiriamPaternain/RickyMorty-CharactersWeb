@@ -5,15 +5,18 @@ import '../styles/Header.scss';
 import getDataFromApi from '../services/api.js';
 import CharacterList from './CharacterList';
 import '../styles/CharacterList.scss';
-
+import ls from '../services/localStorage.js';
 
 function App() {
-  const [characterList, setCharacterList] = useState([]);
+  const [characterList, setCharacterList] = useState(ls.get('characters', []));
 
   useEffect(() => {
-    getDataFromApi().then((cleanData) => {
-      setCharacterList(cleanData);
-    });
+    if (localStorage.getItem('characters') === null){
+      getDataFromApi().then((cleanData) => {
+        setCharacterList(cleanData);
+        ls.set('characters', cleanData);
+      });
+    }
   }, []);
 
   return (
