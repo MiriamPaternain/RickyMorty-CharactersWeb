@@ -16,7 +16,7 @@ const CharacterCard = ({ characterData }) => {
     <div className='cardContainer'>
         <img src={characterData.image} alt='' className='cardContainer__section--image shine'/>
       <section className='cardContainer__section'>
-        <h1 className='cardContainer__section--name'>{characterData.name}</h1>
+        <h1 className='cardContainer__section--name'>- {characterData.name} -</h1>
         <p className='cardContainer__section--species'>{characterData.species}</p>
         <p className='cardContainer__section--episodes'>¿En cuántos episodios aparece? {characterData.episodes.length}</p>
         <p className='cardContainer__section--status'>¿está vivo? {getStatus(characterData.status)}</p>
