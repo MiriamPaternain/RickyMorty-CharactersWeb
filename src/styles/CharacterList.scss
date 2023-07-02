@@ -33,6 +33,11 @@
     width: 200px;
     object-fit: cover;
   }
+  &--text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   &--name {
     color: white;
     max-width: 180px;
@@ -85,3 +90,9 @@
     transform: scale(1.05);
 box-shadow: 0px 0px 20px #3bb54a;
   }
+
+    .fas.fa-skull{
+      color: white;
+      transform: translate(-75px, -170px);
+      font-size: 30px;
+    }

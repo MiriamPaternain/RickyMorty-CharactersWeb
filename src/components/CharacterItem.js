@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 const CharacterItem = (eachCharacter) => {
+ 
   return (
     <Link
       to={'/character/' + eachCharacter.eachCharacter.id}
@@ -12,10 +13,22 @@ const CharacterItem = (eachCharacter) => {
           alt=''
           className='list--img'
         />
-        <h3 className='list--name'> {eachCharacter.eachCharacter.name} </h3>
-        <p className='list--species'>{eachCharacter.eachCharacter.species}</p>
+        {eachCharacter.eachCharacter.status === 'Dead' && (
+            <i className="fas fa-skull"></i>
+          )}
+        <div className='list--text'>
+          <h3 className='list--name'> {eachCharacter.eachCharacter.name} </h3>
+          <p className='list--species'>{eachCharacter.eachCharacter.species}</p>
+        </div>
       </div>
     </Link>
   );
 };
 export default CharacterItem;
+
+
+/* const deadIcon = (eachCharacter) => {
+  if (status.toLowerCase() === 'dead') {
+    return <i className="fas fa-skull"></i>
+  }
+} */
