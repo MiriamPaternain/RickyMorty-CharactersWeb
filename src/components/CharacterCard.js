@@ -5,7 +5,7 @@ const CharacterCard = ({ characterData }) => {
     <>
     <Link to='/' className='cardContainer__section--volver'><i className="fas fa-arrow-left"></i>Volver</Link>
     <div className='cardContainer'>
-        <img src={characterData.image} alt='' className='cardContainer__section--image'/>
+        <img src={characterData.image} alt='' className='cardContainer__section--image shine'/>
       <section className='cardContainer__section'>
         <h1 className='cardContainer__section--name'>{characterData.name}</h1>
         <p className='cardContainer__section--species'>{characterData.species}</p>

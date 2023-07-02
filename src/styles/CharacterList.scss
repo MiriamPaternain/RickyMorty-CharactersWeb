@@ -66,17 +66,22 @@
 
 @keyframes shimmer {
   0% {
-    border-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+    border-color: #3bb54a;
+    box-shadow: 0 0 12px #3bb54a;
   }
 
   50% {
-    border-color: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 0 24px rgba(255, 255, 255, 0.8);
+    border-color: #d3df55;
+    box-shadow: 0 0 48px #d3df55;
   }
 
   100% {
-    border-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 012px rgba(255, 255, 255, 0.5);
+    border-color: #3bb54a;
+    box-shadow: 0 0 12px #3bb54a;
   }
 }
+
+.list--eachCharacter:hover {
+    transform: scale(1.05);
+box-shadow: 0px 0px 20px #3bb54a;
+  }
