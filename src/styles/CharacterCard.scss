@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-margin: auto;
+  margin: auto;
   padding-top: 50px;
 
   max-width: 600px;
@@ -13,12 +13,11 @@ margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-   //transform: translateX(35px);
+    //transform: translateX(35px);
     margin: auto;
     line-height: 30px;
     width: 250px;
     text-align: center;
-   
 
     &--name {
       font-family: Patrick Hand SC;
@@ -93,11 +92,9 @@ margin: auto;
   }
 }
 
-@media all and (min-width: 768px){
-  .cardContainer{
+@media all and (min-width: 768px) {
+  .cardContainer {
     display: flex;
     flex-direction: row;
-   
   }
 }
-
