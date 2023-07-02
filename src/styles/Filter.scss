@@ -1,6 +1,8 @@
 .main__filter{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin-bottom: 40px;
 
     &--byName{
@@ -10,11 +12,23 @@
         border-radius: 10px;
         background-color: #13afc9;
         color: white;
-        font-size: 16px;
+        font-size: 20px;
         text-align: center;
+        font-family: Patrick Hand;
+        letter-spacing: 1px;
     }
         &--byName::placeholder{
             color: white;
             text-align: center;
         }
+}
+
+.notFound{
+font-family: Patrick Hand;
+letter-spacing: 1px;
+color: #13afc9;
+&--word{
+    font-size: 25px;
+    font-weight: 800;
+}
 }

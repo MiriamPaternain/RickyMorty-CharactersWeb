@@ -5,7 +5,7 @@ const Filters = ({ filterByName, handleFilter }) => {
   const handleReturn = (event) => {
     event.preventDefault();
   };
-
+const charactersNotFound = true;
   return (
     <form className='main__filter' onSubmit={handleReturn}>
       <input
@@ -16,6 +16,9 @@ const Filters = ({ filterByName, handleFilter }) => {
         placeholder='Busca aquí tu personaje'
         className='main__filter--byName'
       />
+      {filterByName && charactersNotFound && (
+        <p className="notFound">No hay ningún personaje que coincida con la palabra <span className="notFound--word">{filterByName}</span></p>
+      )}
     </form>
   );
 };
