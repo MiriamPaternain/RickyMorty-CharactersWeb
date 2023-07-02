@@ -5,9 +5,9 @@ const CharacterCard = ({ characterData }) => {
 
 const iconStatus = (status) => {
   if (status.toLowerCase() === 'dead') {
-    return <i className="far fa-skull"></i>
+    return <i className="fas fa-skull"></i>
   } else if (status.toLowerCase() === 'alive') {
-    return<i className="far fa-heart-circle-check"></i>
+    return<i className="fas fa-check"></i>
   } else {
     return <i className="fas fa-question"></i>
   }
@@ -21,7 +21,6 @@ const iconStatus = (status) => {
       return 'No se sabe';
     }
   }; */
-
 
   return (
     <>
