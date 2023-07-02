@@ -2,16 +2,20 @@ import { Link } from 'react-router-dom';
 
 const CharacterCard = ({ characterData }) => {
   return (
-    <div>
-      <section>
-        <h1>{characterData.name}</h1>
-        <p>{characterData.species}</p>
-        <p>¿En cuántos episodios aparece? {characterData.episodes.length}</p>
-        <p>¿está vivo? {characterData.status}</p>
-        <Link to='/'>Volver</Link>
+    <>
+    <Link to='/' className='cardContainer__section--volver'><i className="fas fa-arrow-left"></i>Volver</Link>
+    <div className='cardContainer'>
+        <img src={characterData.image} alt='' className='cardContainer__section--image'/>
+      <section className='cardContainer__section'>
+        <h1 className='cardContainer__section--name'>{characterData.name}</h1>
+        <p className='cardContainer__section--species'>{characterData.species}</p>
+        <p className='cardContainer__section--episodes'>¿En cuántos episodios aparece? {characterData.episodes.length}</p>
+        <p className='cardContainer__section--status'>¿está vivo? {characterData.status}</p>
+        
       </section>
-      <img src={characterData.image} alt='' />
+    
     </div>
+    </>
   );
 };
 

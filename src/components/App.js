@@ -11,6 +11,7 @@ import Filters from './Filters';
 import { Routes, Route } from 'react-router-dom';
 import CharacterCard from './CharacterCard.js';
 import { matchPath, useLocation } from 'react-router';
+import '../styles/CharacterCard.scss';
 
 function App() {
   //variables de estado
