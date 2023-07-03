@@ -12,6 +12,7 @@ import { Routes, Route } from 'react-router-dom';
 import CharacterCard from './CharacterCard.js';
 import { matchPath, useLocation } from 'react-router';
 import '../styles/CharacterCard.scss';
+import '../styles/Footer.scss';
 
 function App() {
   //variables de estado
@@ -94,7 +95,11 @@ function App() {
           />
         </Routes>
       </main>
-      <footer></footer>
+      <footer>
+        <div className="footer">
+          <p className="footer_text">Handmade By Miriam Paternáin</p>
+        </div>
+      </footer>
     </div>
   );
 }
