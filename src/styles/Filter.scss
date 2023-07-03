@@ -1,34 +1,66 @@
-.main__filter{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 40px;
+.main__filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 
-    &--byName{
-        width: 300px;
-        height: 30px;
-        border: none;
-        border-radius: 10px;
-        background-color: #13afc9;
-        color: white;
-        font-size: 20px;
-        text-align: center;
-        font-family: Patrick Hand;
-        letter-spacing: 1px;
-    }
-        &--byName::placeholder{
-            color: white;
-            text-align: center;
-        }
+  &--byName {
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: #13afc9;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-family: Patrick Hand;
+    letter-spacing: 1px;
+  }
+  &--byName::placeholder {
+    color: white;
+    text-align: center;
+  }
 }
 
-.notFound{
-font-family: Patrick Hand;
-letter-spacing: 1px;
-color: #13afc9;
-&--word{
+.notFound {
+  font-family: Patrick Hand;
+  letter-spacing: 1px;
+  color: #13afc9;
+  &--word {
     font-size: 25px;
     font-weight: 800;
+  }
 }
+.filterContainer{
+    display: flex;
+    flex-direction: column;
+    //justify-content: space-around;
+}
+.speciesFilter {
+font-family: Patrick Hand SC;
+font-size: 20px;
+color: #13afc9;
+display: flex;
+justify-content: center;
+margin-bottom: 40px;
+  &--box {
+    margin-left: 10px;
+    background-color: #13afc9;
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    color: white;
+    width: 150px;
+    font-family: Patrick Hand;
+        letter-spacing: 1px;
+        font-size: 20px;
+        text-align: center;
+  }
+ 
+}
+
+.speciesFilter:focus{
+    background-color: #13afc9;
+    color: white;
 }
