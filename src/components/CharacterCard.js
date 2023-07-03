@@ -1,18 +1,8 @@
 import { Link } from 'react-router-dom';
 
 const CharacterCard = ({ characterData }) => {
- 
 
-const iconStatus = (status) => {
-  if (status.toLowerCase() === 'dead') {
-    return <i className="fas fa-skull"></i>
-  } else if (status.toLowerCase() === 'alive') {
-    return<i className="fas fa-check"></i>
-  } else {
-    return <i className="fas fa-question"></i>
-  }
-}
-/* const getStatus = (status) => {
+const getStatus = (status) => {
     if (status.toLowerCase() === 'alive') {
       return 'Sí';
     } else if (status.toLowerCase() === 'dead') {
@@ -20,7 +10,7 @@ const iconStatus = (status) => {
     } else {
       return 'No se sabe';
     }
-  }; */
+  };
 
   return (
     <>
@@ -44,7 +34,7 @@ const iconStatus = (status) => {
             ¿En cuántos episodios aparece? {characterData.episodes.length}
           </p>
           <p className='cardContainer__section--status'>
-            ¿está vivo? {iconStatus(characterData.status)}
+            ¿está vivo? {getStatus(characterData.status)}
           </p>
         </section>
       </div>
@@ -55,10 +45,5 @@ const iconStatus = (status) => {
 export default CharacterCard;
 
 
-//<i class="fa-regular fa-skull"></i>
-
-//<i class="fa-regular fa-alien"></i>
-
-//<i class="fa-regular fa-heart-circle-check"></i>
 
  
