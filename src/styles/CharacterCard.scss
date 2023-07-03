@@ -5,15 +5,12 @@
   justify-content: center;
   margin: auto;
   padding-top: 50px;
-
   max-width: 600px;
+
   &__section {
-    width: 50vw;
     color: #1b8c44;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    //transform: translateX(35px);
     margin: auto;
     line-height: 30px;
     width: 250px;
@@ -26,16 +23,19 @@
       font-size: 30px;
     }
     &--species {
+      width: 400px;
       font-family: Patrick Hand;
       letter-spacing: 1.5px;
       font-size: 20px;
     }
     &--episodes {
+      width: 400px;
       font-family: Patrick Hand;
       letter-spacing: 1.5px;
       font-size: 20px;
     }
     &--status {
+      width: 400px;
       font-family: Patrick Hand;
       letter-spacing: 1.5px;
       font-size: 20px;
@@ -46,7 +46,7 @@
       font-size: 20px;
       letter-spacing: 1px;
       text-decoration: none;
-      margin-left: 110px;
+      margin-left: 180px;
     }
     &--image {
       border-radius: 50%;
@@ -99,4 +99,14 @@
     flex-direction: row;
   }
 }
+.pageNotFound{
+  display: flex;
+  justify-content: center;
+ 
+  width: 100%;
+    font-family: Patrick Hand;
+    letter-spacing: 1.5px;
+    font-size: 25px;
+    color: #13afc9;
 
+}

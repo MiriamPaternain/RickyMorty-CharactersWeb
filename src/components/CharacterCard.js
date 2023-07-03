@@ -12,7 +12,7 @@ const getStatus = (status) => {
       return 'No se sabe';
     }
   };
-
+if(characterData){
   return (
     <>
       <Link to='/' className='cardContainer__section--volver'>
@@ -41,8 +41,16 @@ const getStatus = (status) => {
       </div>
     </>
   );
-};
-
+}
+else{
+  return (
+     <>
+      <p className='pageNotFound'>Parece que la página que buscas es errónea</p>
+      <p className='pageNotFound'>Hay pros y contras en todas las líneas temporales alternativas</p>
+      </>
+  )
+}
+}
 export default CharacterCard;
 
 

@@ -9,15 +9,16 @@ const CharacterItem = (eachCharacter) => {
         className='list--link'
       >
         <section className='list--eachCharacter'>
-          <div className="list--imgContainer">
-            <img
-              src={eachCharacter.eachCharacter.image}
-              alt=''
-              className='list--img'
-            />
-          </div>
+          <img
+            src={eachCharacter.eachCharacter.image}
+            alt=''
+            className='list--img'
+          />
           {eachCharacter.eachCharacter.status === 'Dead' && (
             <i className='fas fa-skull'></i>
+          )}
+          {eachCharacter.eachCharacter.speciea === 'Human' && (
+            <i className="fas fa-person"></i>
           )}
           {/* {eachCharacter.eachCharacter.species === 'Alien' && (
             <i className='fab fa-reddit-alien'></i>
