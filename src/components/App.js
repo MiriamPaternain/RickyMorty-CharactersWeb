@@ -19,7 +19,6 @@ function App() {
   const [characterList, setCharacterList] = useState(ls.get('characters', []));
   const [filterByName, setFilterByName] = useState('');
   const [filterBySpecie, setFilterBySpecie] = useState('ALL');
-  
 
   //useEffect
   useEffect(() => {
@@ -96,8 +95,8 @@ function App() {
         </Routes>
       </main>
       <footer>
-        <div className="footer">
-          <p className="footer_text">Handmade By Miriam Paternáin</p>
+        <div className='footer'>
+          <p className='footer_text'>Handmade By Miriam Paternáin</p>
         </div>
       </footer>
     </div>

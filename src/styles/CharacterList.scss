@@ -21,10 +21,8 @@
   }
 
   &--img {
-   
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
     width: 200px;
-    //object-fit: cover;
   }
   &--name {
     color: white;
@@ -84,10 +82,9 @@
 
 .fas.fa-skull {
   color: white;
-  //transform: translate(-300px);
   font-size: 20px;
   transform: translateY(10px);
 }
-.fas fa-alien{
+.fas fa-alien {
   color: white;
 }

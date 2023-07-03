@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 
 const CharacterItem = (eachCharacter) => {
-  
   return (
     <>
       <Link
@@ -18,12 +17,12 @@ const CharacterItem = (eachCharacter) => {
             <i className='fas fa-skull'></i>
           )}
           {eachCharacter.eachCharacter.speciea === 'Human' && (
-            <i className="fas fa-person"></i>
+            <i className='fas fa-person'></i>
           )}
           {/* {eachCharacter.eachCharacter.species === 'Alien' && (
             <i className='fab fa-reddit-alien'></i>
           )} */}
-         
+
           <h3 className='list--name'> {eachCharacter.eachCharacter.name} </h3>
           <p className='list--species'>{eachCharacter.eachCharacter.species}</p>
         </section>

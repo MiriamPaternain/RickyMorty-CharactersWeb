@@ -11,7 +11,7 @@ const Filters = ({ filterByName, handleFilter, filterBySpecie }) => {
   };
   return (
     <>
-      <div className="filterContainer">
+      <div className='filterContainer'>
         <form className='main__filter' onSubmit={handleReturn}>
           <input
             type='text'
@@ -21,7 +21,6 @@ const Filters = ({ filterByName, handleFilter, filterBySpecie }) => {
             placeholder='Busca aquí tu personaje'
             className='main__filter--byName'
           />
-         
         </form>
         <label className='speciesFilter' htmlFor='search_species'>
           Escoge una especie
@@ -32,19 +31,23 @@ const Filters = ({ filterByName, handleFilter, filterBySpecie }) => {
             value={filterBySpecie}
             onChange={handleFilterSpecie}
           >
-            <option selected disbled value='ALL' className="speciesFilter--all">
+            <option selected disbled value='ALL' className='speciesFilter--all'>
               Todas
             </option>
-            <option value='Human' className="speciesFilter--human">Humano</option>
-            <option value='Alien' className="speciesFilter--alien">Alien</option>
+            <option value='Human' className='speciesFilter--human'>
+              Humano
+            </option>
+            <option value='Alien' className='speciesFilter--alien'>
+              Alien
+            </option>
           </select>
         </label>
-         {filterByName && charactersNotFound && (
-            <p className='notFound'>
-              No hay ningún personaje que coincida con la palabra{' '}
-              <span className='notFound--word'>{filterByName}</span>
-            </p>
-          )}
+        {filterByName && charactersNotFound && (
+          <p className='notFound'>
+            No hay ningún personaje que coincida con la palabra{' '}
+            <span className='notFound--word'>{filterByName}</span>
+          </p>
+        )}
       </div>
     </>
   );
