@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 const CharacterItem = (eachCharacter) => {
+  
   return (
     <>
       <Link

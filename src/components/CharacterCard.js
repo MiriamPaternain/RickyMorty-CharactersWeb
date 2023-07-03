@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 
 const CharacterCard = ({ characterData }) => {
 
+
 const getStatus = (status) => {
     if (status.toLowerCase() === 'alive') {
       return 'Sí';
