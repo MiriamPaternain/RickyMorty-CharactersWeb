@@ -17,6 +17,7 @@ function App() {
   //variables de estado
   const [characterList, setCharacterList] = useState(ls.get('characters', []));
   const [filterByName, setFilterByName] = useState('');
+  const [filterBySpecie, setFilterBySpecie] = useState('ALL');
 
   //useEffect
   useEffect(() => {
@@ -30,8 +31,15 @@ function App() {
 
   //functions
   const filteredList = characterList.filter((eachCharacter) =>
-    eachCharacter.name.toLowerCase().includes(filterByName.toLowerCase())
-  );
+    eachCharacter.name.toLowerCase().includes(filterByName.toLowerCase()))
+      .filter((eachCharacter) => {
+        if (filterBySpecie === 'ALL') {
+          return true;
+        } else {
+          return eachCharacter.species === filterBySpecie;
+        }
+      });
+
 
   const handleFilter = (filterBy, targetValue) => {
     if (filterBy === 'name') {
@@ -42,12 +50,16 @@ function App() {
   const { pathname } = useLocation();
   const routeData = matchPath('/character/:characterId', pathname);
   const characterId = routeData?.params.characterId;
- 
+
   //const characterId = routeData !== null ? routeData.params.contactId: '';
 
   const characterData = characterList.find(
     (eachCharacter) => eachCharacter.id === parseInt(characterId)
   );
+
+  const handleFilterSpecie = (event) => {
+    setFilterBySpecie(event.target.value);
+  };
 
   return (
     <div>
@@ -68,6 +80,22 @@ function App() {
                   filterByName={filterByName}
                   handleFilter={handleFilter}
                 />
+                <label className='specieFilter' htmlFor='search_species'>
+                  Especie
+                  <select
+                    className='specieFilter--box'
+                    name='search_species'
+                    id='search_species'
+                    value={filterBySpecie}
+                    onChange={handleFilterSpecie}
+                  >
+                    <option selected disbled value='ALL'>
+                      Escoge una especie
+                    </option>
+                    <option value='Human'>Humano</option>
+                    <option value='Alien'>Alien</option>
+                  </select>
+                </label>
                 <form className='main__characters--listCaracter'>
                   <CharacterList characterList={filteredList} />
                 </form>
