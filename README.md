@@ -21,6 +21,6 @@ Install my-project with npm Install
 You will need react-router-dom and node-sass to be able to display it correctly.
 
 
-## Author 🙋‍♀️
+## Author
 
 - Miriam Paternáin
