@@ -45,6 +45,9 @@ function App() {
     if (filterBy === 'name') {
       setFilterByName(targetValue);
     }
+    else if (filterBy === 'species') {
+      setFilterBySpecie(targetValue)
+    }
   };
 
   const { pathname } = useLocation();
@@ -57,9 +60,7 @@ function App() {
     (eachCharacter) => eachCharacter.id === parseInt(characterId)
   );
 
-  const handleFilterSpecie = (event) => {
-    setFilterBySpecie(event.target.value);
-  };
+  
 
   return (
     <div>
@@ -78,24 +79,10 @@ function App() {
               <>
                 <Filters
                   filterByName={filterByName}
+                  filterBySpecie={filterBySpecie}
                   handleFilter={handleFilter}
                 />
-                <label className='specieFilter' htmlFor='search_species'>
-                  Especie
-                  <select
-                    className='specieFilter--box'
-                    name='search_species'
-                    id='search_species'
-                    value={filterBySpecie}
-                    onChange={handleFilterSpecie}
-                  >
-                    <option selected disbled value='ALL'>
-                      Escoge una especie
-                    </option>
-                    <option value='Human'>Humano</option>
-                    <option value='Alien'>Alien</option>
-                  </select>
-                </label>
+                
                 <form className='main__characters--listCaracter'>
                   <CharacterList characterList={filteredList} />
                 </form>
