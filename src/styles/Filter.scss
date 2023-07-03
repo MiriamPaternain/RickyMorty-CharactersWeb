@@ -24,12 +24,16 @@
 }
 
 .notFound {
+  display: flex;
+  justify-content: center;
   font-family: Patrick Hand;
   letter-spacing: 1px;
   color: #13afc9;
   &--word {
     font-size: 25px;
     font-weight: 800;
+    margin-left: 10px;
+    transform: translateY(-8px);
   }
 }
 .filterContainer{

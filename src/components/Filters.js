@@ -21,12 +21,7 @@ const Filters = ({ filterByName, handleFilter, filterBySpecie }) => {
             placeholder='Busca aquí tu personaje'
             className='main__filter--byName'
           />
-          {filterByName && charactersNotFound && (
-            <p className='notFound'>
-              No hay ningún personaje que coincida con la palabra{' '}
-              <span className='notFound--word'>{filterByName}</span>
-            </p>
-          )}
+         
         </form>
         <label className='speciesFilter' htmlFor='search_species'>
           Escoge una especie
@@ -44,6 +39,12 @@ const Filters = ({ filterByName, handleFilter, filterBySpecie }) => {
             <option value='Alien' className="speciesFilter--alien">Alien</option>
           </select>
         </label>
+         {filterByName && charactersNotFound && (
+            <p className='notFound'>
+              No hay ningún personaje que coincida con la palabra{' '}
+              <span className='notFound--word'>{filterByName}</span>
+            </p>
+          )}
       </div>
     </>
   );
