@@ -1,9 +1,9 @@
-.main__characters {
+/* .main__characters {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-}
+} */
 
 .list {
   display: flex;
@@ -21,17 +21,25 @@
     box-shadow: 0px 0px 8px #3bb54a;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     background-color: #13afc9;
     position: relative;
     height: 310px;
     overflow: hidden;
   }
+  &--imgContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    width: 200px;
+    
+  }
   &--img {
+   
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
     width: 200px;
-    max-height: 200px;
+    height: 200px;
     object-fit: cover;
   }
   &--name {
