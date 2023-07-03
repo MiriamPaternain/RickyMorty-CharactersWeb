@@ -12,9 +12,9 @@
   flex-wrap: wrap;
   gap: 20px;
   list-style: none;
-&--a{
-  text-decoration: none;
-}
+  &--a {
+    text-decoration: none;
+  }
   &--eachCharacter {
     border: 1px solid #3bb54a;
     border-radius: 4px;
@@ -48,9 +48,9 @@
     letter-spacing: 1px;
     max-height: 20px;
   }
-&--link{
-  text-decoration: none;
-}
+  &--link {
+    text-decoration: none;
+  }
 }
 
 .list--eachCharacter::after {
@@ -84,12 +84,15 @@
 }
 
 .list--eachCharacter:hover {
-    transform: scale(1.05);
-box-shadow: 0px 0px 20px #3bb54a;
-  }
+  transform: scale(1.05);
+  box-shadow: 0px 0px 20px #3bb54a;
+}
 
-    .fas.fa-skull{
-      color: white;
-      transform: translate(-75px, -170px);
-      font-size: 30px;
-    }
+.fas.fa-skull {
+  color: white;
+  transform: translate(-75px, -170px);
+  font-size: 30px;
+}
+.fas fa-alien{
+  color: white;
+}

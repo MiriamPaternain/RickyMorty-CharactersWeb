@@ -18,7 +18,7 @@ const CharacterItem = (eachCharacter) => {
             <i className='fas fa-skull'></i>
           )}
           {eachCharacter.eachCharacter.species === 'Alien' && (
-            <i className='fas fa-alien'></i>
+            <i className='fa-solid fa-alien'></i>
           )}
           <h3 className='list--name'> {eachCharacter.eachCharacter.name} </h3>
           <p className='list--species'>{eachCharacter.eachCharacter.species}</p>

@@ -18,6 +18,7 @@ function App() {
   const [characterList, setCharacterList] = useState(ls.get('characters', []));
   const [filterByName, setFilterByName] = useState('');
   const [filterBySpecie, setFilterBySpecie] = useState('ALL');
+  
 
   //useEffect
   useEffect(() => {
@@ -30,23 +31,23 @@ function App() {
   }, []);
 
   //functions
-  const filteredList = characterList.filter((eachCharacter) =>
-    eachCharacter.name.toLowerCase().includes(filterByName.toLowerCase()))
-      .filter((eachCharacter) => {
-        if (filterBySpecie === 'ALL') {
-          return true;
-        } else {
-          return eachCharacter.species === filterBySpecie;
-        }
-      });
-
+  const filteredList = characterList
+    .filter((eachCharacter) =>
+      eachCharacter.name.toLowerCase().includes(filterByName.toLowerCase())
+    )
+    .filter((eachCharacter) => {
+      if (filterBySpecie === 'ALL') {
+        return true;
+      } else {
+        return eachCharacter.species === filterBySpecie;
+      }
+    });
 
   const handleFilter = (filterBy, targetValue) => {
     if (filterBy === 'name') {
       setFilterByName(targetValue);
-    }
-    else if (filterBy === 'species') {
-      setFilterBySpecie(targetValue)
+    } else if (filterBy === 'species') {
+      setFilterBySpecie(targetValue);
     }
   };
 
@@ -59,8 +60,6 @@ function App() {
   const characterData = characterList.find(
     (eachCharacter) => eachCharacter.id === parseInt(characterId)
   );
-
-  
 
   return (
     <div>
@@ -82,7 +81,7 @@ function App() {
                   filterBySpecie={filterBySpecie}
                   handleFilter={handleFilter}
                 />
-                
+
                 <form className='main__characters--listCaracter'>
                   <CharacterList characterList={filteredList} />
                 </form>
