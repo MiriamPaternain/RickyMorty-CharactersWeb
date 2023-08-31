@@ -80,6 +80,7 @@ function App() {
                   filterByName={filterByName}
                   filterBySpecie={filterBySpecie}
                   handleFilter={handleFilter}
+                  filteredList={filteredList}
                 />
 
                 <form className='main__characters--listCaracter'>

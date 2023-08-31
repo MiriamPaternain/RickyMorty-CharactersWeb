@@ -1,11 +1,16 @@
-const Filters = ({ filterByName, handleFilter, filterBySpecie }) => {
+const Filters = ({
+  filterByName,
+  handleFilter,
+  filterBySpecie,
+  filteredList,
+}) => {
   const handleChangeFilterName = (event) => {
     handleFilter('name', event.target.value);
   };
   const handleReturn = (event) => {
     event.preventDefault();
   };
-  const charactersNotFound = true;
+  const charactersNotFound = false;
   const handleFilterSpecie = (event) => {
     handleFilter('species', event.target.value);
   };
@@ -42,12 +47,14 @@ const Filters = ({ filterByName, handleFilter, filterBySpecie }) => {
             </option>
           </select>
         </label>
-        {filterByName && charactersNotFound && (
+
+     {/*    {filterByName && charactersNotFound && (
           <p className='notFound'>
             No hay ningún personaje que coincida con la palabra{' '}
             <span className='notFound--word'>{filterByName}</span>
           </p>
-        )}
+        )} */}
+       
       </div>
     </>
   );
