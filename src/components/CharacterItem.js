@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types'; 
 
 const CharacterItem = ({ eachCharacter }) => {
   const { id, image, status, species, name } = eachCharacter;
@@ -18,6 +19,15 @@ const CharacterItem = ({ eachCharacter }) => {
       </Link>
     </>
   );
+};
+CharacterItem.propTypes = {
+  eachCharacter: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    image: PropTypes.string.isRequired,
+    status: PropTypes.string.isRequired,
+    species: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+  }).isRequired,
 };
 export default CharacterItem;
 
