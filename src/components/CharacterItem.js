@@ -1,30 +1,19 @@
 import { Link } from 'react-router-dom';
 
-const CharacterItem = (eachCharacter) => {
+const CharacterItem = ({ eachCharacter }) => {
+  const { id, image, status, species, name } = eachCharacter;
+
   return (
     <>
-      <Link
-        to={'/character/' + eachCharacter.eachCharacter.id}
-        className='list--link'
-      >
+      <Link to={`/character/${id}`} className='list--link'>
         <section className='list--eachCharacter'>
-          <img
-            src={eachCharacter.eachCharacter.image}
-            alt=''
-            className='list--img'
-          />
-          {eachCharacter.eachCharacter.status === 'Dead' && (
-            <i className='fas fa-skull'></i>
-          )}
-          {eachCharacter.eachCharacter.speciea === 'Human' && (
-            <i className='fas fa-person'></i>
-          )}
-          {/* {eachCharacter.eachCharacter.species === 'Alien' && (
-            <i className='fab fa-reddit-alien'></i>
-          )} */}
+          <img src={image} alt='' className='list--img' />
+          {status === 'Dead' && <i className='fas fa-skull'></i>}
+          {species === 'Human' && <i className='fas fa-person'></i>}
+          {/* {species === 'Alien' && <i className='fab fa-reddit-alien'></i>} */}
 
-          <h3 className='list--name'> {eachCharacter.eachCharacter.name} </h3>
-          <p className='list--species'>{eachCharacter.eachCharacter.species}</p>
+         <h3 className='list--name'>{name}</h3>
+          <p className='list--species'>{species}</p>
         </section>
       </Link>
     </>
