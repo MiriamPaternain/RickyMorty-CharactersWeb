@@ -1,3 +1,6 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
 const Filters = ({
   filterByName,
   handleFilter,
@@ -59,5 +62,10 @@ const Filters = ({
     </>
   );
 };
-
+Filters.propTypes = {
+  filterByName: PropTypes.string.isRequired,
+  handleFilter: PropTypes.func.isRequired,
+  filterBySpecie: PropTypes.string.isRequired,
+  filteredList: PropTypes.array.isRequired,
+};
 export default Filters;
