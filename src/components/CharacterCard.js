@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types'; 
 
 const CharacterCard = ({ characterData }) => {
   const getStatus = (status) => {
@@ -52,4 +53,14 @@ const CharacterCard = ({ characterData }) => {
     );
   }
 };
+CharacterCard.propTypes = {
+  characterData: PropTypes.shape({
+    image: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    species: PropTypes.string.isRequired,
+    episodes: PropTypes.array.isRequired,
+    status: PropTypes.string.isRequired,
+  }),
+};
+
 export default CharacterCard;
