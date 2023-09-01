@@ -48,12 +48,12 @@ const Filters = ({
           </select>
         </label>
 
-     {/*    {filterByName && charactersNotFound && (
+        {filterByName && charactersNotFound && (
           <p className='notFound'>
             No hay ningún personaje que coincida con la palabra{' '}
             <span className='notFound--word'>{filterByName}</span>
           </p>
-        )} */}
+        )}
        
       </div>
     </>
