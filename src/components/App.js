@@ -1,18 +1,13 @@
 import { useEffect, useState } from 'react';
 import randmImage from '../img/randm.png';
 import '../styles/App.scss';
-import '../styles/Header.scss';
 import getDataFromApi from '../services/api.js';
 import CharacterList from './CharacterList';
-import '../styles/CharacterList.scss';
 import ls from '../services/localStorage.js';
-import '../styles/Filter.scss';
 import Filters from './Filters';
 import { Routes, Route } from 'react-router-dom';
 import CharacterCard from './CharacterCard.js';
 import { matchPath, useLocation } from 'react-router';
-import '../styles/CharacterCard.scss';
-import '../styles/Footer.scss';
 
 function App() {
   //variables de estado
